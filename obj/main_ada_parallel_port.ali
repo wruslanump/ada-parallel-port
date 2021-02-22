@@ -12,7 +12,7 @@ RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main_ada_parallel_port%b  main_ada_parallel_port.adb  30ab8033 NE OO SU IL
+U main_ada_parallel_port%b  main_ada_parallel_port.adb  3a250c37 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -23,6 +23,7 @@ W interfaces.c%s	i-c.adb			i-c.ali
 W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
 W pkg_ada_dtstamp%s	pkg_ada_dtstamp.adb	pkg_ada_dtstamp.ali
 W pkg_ada_ppdev%s	pkg_ada_ppdev.ads	pkg_ada_ppdev.ali
+W pkg_ada_random%s	pkg_ada_random.adb	pkg_ada_random.ali
 
 D ada.ads		20200312110721 76789da1 ada%s
 D a-charac.ads		20200312110721 2d3ec45b ada.characters%s
@@ -42,9 +43,10 @@ D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-c.ads		20200312110721 5421119b interfaces.c%s
 D i-cexten.ads		20200312110721 38d7e116 interfaces.c.extensions%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
-D main_ada_parallel_port.adb  20210222142355 2bbcf9b0 main_ada_parallel_port%b
+D main_ada_parallel_port.adb  20210222154720 22db56c3 main_ada_parallel_port%b
 D pkg_ada_dtstamp.ads	20210221081420 f15ab596 pkg_ada_dtstamp%s
 D pkg_ada_ppdev.ads	20201218154742 8c7ebaae pkg_ada_ppdev%s
+D pkg_ada_random.ads	20210221153352 03e92377 pkg_ada_random%s
 D system.ads		20200312110721 4635ec04 system%s
 D s-atacco.ads		20200312110721 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200312110721 b45c2d8d system.atomic_counters%s
@@ -84,64 +86,72 @@ X 11 a-strunb.ads
 76K21*Unbounded 491e26 19|10w18 11r18 34r40
 X 13 a-textio.ads
 49K13*Text_IO 471e16 19|7w10 32r32
-166U14*New_Line 19|81s9 104s9
-263U14*Put_Line 19|79s24 80s24 104s39 110s39 111s39 112s39 113s39 114s29
+166U14*New_Line 19|84s9 104s9 116s9 120s9
+263U14*Put_Line 19|82s24 83s24 105s9 120s39 126s39 127s39 128s39 129s39 130s29
 X 15 interfac.ads
 38K9*Interfaces 184e15 19|13r6 14r6 15r6 16r6 35r28 36r28
 X 16 i-c.ads
 18K20*C 230e17 19|13w17 14r17 15r17 16r17 35r39 36r39
 35I9*int<integer> 19|46r23 47r23 48r23 49r23 51r27 52r27 59r27 60r27 61r27
-. 62r27 65r27 66r27 67r27 70r27 71r27 73r32 74r32 75r32
+. 62r27 65r27 66r27 67r27 70r32 71r32 73r32 74r32 75r32 78r32 109r85
 72E9*char<character>
 79A9*char_array(72E9)<60M9> 19|56r27 72r32
 X 17 i-cexten.ads
 37K22*Extensions 476e28 19|15w19 16r19 36r41
 X 19 main_ada_parallel_port.adb
-26U11*main_ada_parallel_port 26b11 118l5 118t27
-32K12 ATIO=32:32 79r19 80r19 81r4 104r4 104r34 110r34 111r34 112r34 113r34
-. 114r24
+26U11*main_ada_parallel_port 26b11 134l5 134t27
+32K12 ATIO=32:32 82r19 83r19 84r4 104r4 105r4 116r4 120r4 120r34 126r34 127r34
+. 128r34 129r34 130r24
 33K12 ART=33:32
 34K12 ASU=34:40
 35K12 IFaceC=35:39 46r16 47r16 48r16 49r16 51r20 52r20 56r20 59r20 60r20
-. 61r20 62r20 65r20 66r20 67r20 70r20 71r20 72r25 73r25 74r25 75r25
+. 61r20 62r20 65r20 66r20 67r20 70r25 71r25 72r25 73r25 74r25 75r25 78r25
+. 109r78
 36K12 IFaceCE=36:41
-40K12 PADTS=40:28 79r4 80r4 85r4 90r4 91r4 92r4 93r4 96r4 100r4 101r4 104r19
-41K12 PAPPDEV=41:28 86r16 90r36 91r36 92r36 93r36 97r23 100r34 101r32
+39K12 PADTS=39:28 82r4 83r4 88r4 93r4 94r4 95r4 96r4 117r4 118r4 120r19
+40K12 PAPPDEV=40:28 89r16 93r36 94r36 95r36 96r36 109r25 117r34 118r32
+42K12 PAR=42:28 108r21
 46i4 O_RDONLY{16|35I9}
 47i4 O_WRONLY{16|35I9}
 48i4 O_RDWR{16|35I9}
 49i4 O_ACCMODE{16|35I9}
 51i4 PPDATADIR_OUT{16|35I9}
 52i4 PPDATADIR_IN{16|35I9}
-56a4 port{16|79A9} 86r52
-59i4 fd_attrib{16|35I9} 86r58
-60i4 ret_open{16|35I9} 86m4 87r10
-61i4 fd{16|35I9} 87m4 90r76 91r78 92r78 93r79 97r76 101r69
-62i4 ret_claim{16|35I9} 90m19
-65i4 modetoset{16|35I9} 91r82
-66i4 ret_setmode{16|35I9} 91m19
-67i4 ret_getmode{16|35I9} 92m19
-70i4 datadirection{16|35I9} 93r83
-71i4 ret_direction{16|35I9} 93m19
-72a4 stream_datatowrite{16|79A9} 97r80
-73i4 ret_writestream{16|35I9} 97m4
-74i4 ret_release{16|35I9} 100m19
-75i4 ret_close{16|35I9} 101m19
+56a4 port{16|79A9} 89r52
+59i4 fd_attrib{16|35I9} 89r58
+60i4 ret_open{16|35I9} 89m4 90r10
+61i4 fd{16|35I9} 90m4 93r76 94r78 95r78 96r79 109r74 118r69
+62i4 ret_claim{16|35I9} 93m19
+65i4 modetoset{16|35I9} 94r82
+66i4 ret_setmode{16|35I9} 94m19
+67i4 ret_getmode{16|35I9} 95m19
+70i4 datadirection{16|35I9} 96r83
+71i4 ret_direction{16|35I9} 96m19
+72a4 stream_datatowrite{16|79A9}
+73i4 ret_writestream{16|35I9}
+74i4 ret_release{16|35I9} 117m19
+75i4 ret_close{16|35I9} 118m19
+77i4 random_int{integer} 108m7 109r89
+78i4 ret_inttowrite{16|35I9} 109m7
+107i8 idx{integer}
 X 20 pkg_ada_dtstamp.ads
-10K9*pkg_ada_dtstamp 19|20w6 40r28 20|31e20
-17U14*dtstamp 19|79s10 80s10 85s10 90s10 91s10 92s10 93s10 96s10 100s10 101s10
-. 104s25
+10K9*pkg_ada_dtstamp 19|20w6 39r28 20|31e20
+17U14*dtstamp 19|82s10 83s10 88s10 93s10 94s10 95s10 96s10 117s10 118s10
+. 120s25
 X 21 pkg_ada_ppdev.ads
-7K9*pkg_ada_ppdev 19|21w6 41r28 21|204e18
-41V12*GetC_ada_ioctl_open_parport{16|35I9} 19|86s24
-46V12*GetC_ada_ioctl_ppclaim_parport{16|35I9} 19|90s44
-56V12*GetC_ada_ioctl_ppsetmode_parport{16|35I9} 19|91s44
-61V12*GetC_ada_ioctl_ppgetmode_current{16|35I9} 19|92s44
-86V12*GetC_ada_ioctl_ppdatadir_dataport{16|35I9} 19|93s44
-97V13*GetC_ada_ioctl_streamdata_writedataregister{16|35I9} 19|97s31
-157V12*GetC_ada_ioctl_pprelease_parport{16|35I9} 19|100s42
-162V12*GetC_ada_ioctl_close_parport{16|35I9} 19|101s40
-X 38 s-stausa.ads
+7K9*pkg_ada_ppdev 19|21w6 40r28 21|204e18
+41V12*GetC_ada_ioctl_open_parport{16|35I9} 19|89s24
+46V12*GetC_ada_ioctl_ppclaim_parport{16|35I9} 19|93s44
+56V12*GetC_ada_ioctl_ppsetmode_parport{16|35I9} 19|94s44
+61V12*GetC_ada_ioctl_ppgetmode_current{16|35I9} 19|95s44
+86V12*GetC_ada_ioctl_ppdatadir_dataport{16|35I9} 19|96s44
+91V12*GetC_ada_ioctl_ppwdata_writedataregister{16|35I9} 19|109s33
+157V12*GetC_ada_ioctl_pprelease_parport{16|35I9} 19|117s42
+162V12*GetC_ada_ioctl_close_parport{16|35I9} 19|118s40
+X 22 pkg_ada_random.ads
+3K9*pkg_ada_random 19|23w6 42r28 22|14e19
+10V13*get_random_integer{integer} 19|108s25
+X 39 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 

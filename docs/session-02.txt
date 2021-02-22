@@ -1,0 +1,133 @@
+
+===========================================================
+gprbuild -d -P/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr -s -k
+Compile
+   [Ada]          main_ada_parallel_port.adb
+   [C]            Cada_ppdev.c
+   [Ada]          pkg_ada_dtstamp.adb
+   [Ada]          pkg_ada_ppdev.ads
+   [Ada]          pkg_ada_random.adb
+Bind
+   [gprbind]      main_ada_parallel_port.bexch
+   [Ada]          main_ada_parallel_port.ali
+Link
+   [archive]      libada_parallel_port.a
+   [index]        libada_parallel_port.a
+   [link]         main_ada_parallel_port.adb
+[2021-02-22 23:43:17] process terminated successfully, elapsed time: 01.44s
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-parallel-port/exec$ sudo ./main_ada_parallel_port.adx 
+2021-02-22 15:34:29.33893532740 Bismillah 3 times WRY
+2021-02-22 15:34:29.33893558903 Running inside GNAT Studio Community
+
+2021-02-22 15:34:29.33893601933 Success. OPEN parallel port = /dev/parport0, fd_ada = 3, fd_attrib_ada = 2 = O_RDWR 
+2021-02-22 15:34:29.33893670975 Success. PPCLAIM access to parport: the_port /dev/parport0 , fd_ada = 3 
+2021-02-22 15:34:29.33893873573 Set PPSETMODE for parport mode: fd_ada = 3, modetoset = 8 => PARPORT_MODE_ECP 
+2021-02-22 15:34:29.33893897102 Get PPGETMODE current parport mode: fd_ada = 3, the_mode: INT= 8 BIN= 00001000 = PARPORT_MODE_ECP 
+2021-02-22 15:34:29.33893909546 Set PPDATADIR parport data direction: fd_ada = 3, datadirection = 0 = PPDATADIR_OUT 
+
+Parport write random integers in a loop
+Write	 PPWDATA 	: UCHAR= � 	INT= 195 	HEX= 0xc3 	BIN= 11000011
+Write	 PPWDATA 	: UCHAR= � 	INT= 228 	HEX= 0xe4 	BIN= 11100100
+Write	 PPWDATA 	: UCHAR= � 	INT= 225 	HEX= 0xe1 	BIN= 11100001
+Write	 PPWDATA 	: UCHAR= 4 	INT= 52 	HEX= 0x34 	BIN= 00110100
+Write	 PPWDATA 	: UCHAR= � 	INT= 193 	HEX= 0xc1 	BIN= 11000001
+Write	 PPWDATA 	: UCHAR= � 	INT= 204 	HEX= 0xcc 	BIN= 11001100
+Write	 PPWDATA 	: UCHAR= p 	INT= 112 	HEX= 0x70 	BIN= 01110000
+Write	 PPWDATA 	: UCHAR= � 	INT= 219 	HEX= 0xdb 	BIN= 11011011
+Write	 PPWDATA 	: UCHAR= � 	INT= 204 	HEX= 0xcc 	BIN= 11001100
+Write	 PPWDATA 	: UCHAR= 0 	INT= 48 	HEX= 0x30 	BIN= 00110000
+
+2021-02-22 15:34:29.33894034758 Success. PPRELEASE the parport device: fd_ada = 3, port_ada = /dev/parport0 
+2021-02-22 15:34:29.33894046855 Success. CLOSE the parport device: fd_ada = 3, port_ada = /dev/parport0 
+
+2021-02-22 15:34:29.38939776800 Alhamdulillah 3 times WRY
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-parallel-port/exec$ 
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-parallel-port/exec$ cd ../
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-parallel-port$ tree ./
+./
+├── ada_parallel_port.gpr
+├── docs
+│   ├── session-01.txt
+│   ├── session-02.txt
+│   └── TEMP
+│       ├── C-ada-ppdev
+│       │   ├── Cada_ppdev.c
+│       │   └── Cada_ppdev.h
+│       ├── C-headers
+│       │   └── ppdev.h
+│       ├── gpr_ada_ppdev.gpr
+│       ├── main_ada_ppdev.adb
+│       ├── main_ada_test1.adb
+│       ├── main_ada_test2.adb
+│       ├── main_ada_timing.adb
+│       ├── Pkg-aada-ppdev
+│       │   ├── pkg_aada_ppdev.adb
+│       │   └── pkg_aada_ppdev.ads
+│       ├── Pkg-ada-dtstamp
+│       │   ├── pkg_ada_dtstamp.adb
+│       │   └── pkg_ada_dtstamp.ads
+│       └── Pkg-ada-ppdev
+│           └── pkg_ada_ppdev.ads
+├── exec
+│   └── main_ada_parallel_port.adx
+├── figures
+├── obj
+│   ├── ada_parallel_port-loc.xml
+│   ├── b__main_ada_parallel_port.adb
+│   ├── b__main_ada_parallel_port.ads
+│   ├── b__main_ada_parallel_port.ali
+│   ├── b__main_ada_parallel_port.o
+│   ├── Cada_ppdev.c.stderr
+│   ├── Cada_ppdev.c.stdout
+│   ├── Cada_ppdev.cswi
+│   ├── Cada_ppdev.d
+│   ├── Cada_ppdev.o
+│   ├── clang_ref_cache.db
+│   ├── libada_parallel_port.a
+│   ├── libada_parallel_port.deps
+│   ├── main_ada_parallel_port.adb.stderr
+│   ├── main_ada_parallel_port.adb.stdout
+│   ├── main_ada_parallel_port.ali
+│   ├── main_ada_parallel_port.bexch
+│   ├── main_ada_parallel_port.cswi
+│   ├── main_ada_parallel_port.o
+│   ├── pkg_ada_dtstamp.adb.stderr
+│   ├── pkg_ada_dtstamp.adb.stdout
+│   ├── pkg_ada_dtstamp.ali
+│   ├── pkg_ada_dtstamp.cswi
+│   ├── pkg_ada_dtstamp.o
+│   ├── pkg_ada_ppdev.ads.stderr
+│   ├── pkg_ada_ppdev.ads.stdout
+│   ├── pkg_ada_ppdev.ali
+│   ├── pkg_ada_ppdev.cswi
+│   ├── pkg_ada_ppdev.o
+│   ├── pkg_ada_random.adb.stderr
+│   ├── pkg_ada_random.adb.stdout
+│   ├── pkg_ada_random.ali
+│   ├── pkg_ada_random.cswi
+│   └── pkg_ada_random.o
+├── README.md
+└── src
+    ├── C-ada-ppdev
+    │   ├── Cada_ppdev.c
+    │   └── Cada_ppdev.h
+    ├── C-headers
+    │   └── ppdev.h
+    ├── main_ada_parallel_port.adb
+    ├── pkg-ada-dtstamp
+    │   ├── pkg_ada_dtstamp.adb
+    │   └── pkg_ada_dtstamp.ads
+    ├── pkg-ada-ppdev
+    │   └── pkg_ada_ppdev.ads
+    └── pkg-ada-random
+        ├── pkg_ada_random.adb
+        └── pkg_ada_random.ads
+
+16 directories, 61 files
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-parallel-port$ 
+
+

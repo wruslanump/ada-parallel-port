@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file />
+  <Project >
     <file_marker column=" 1" line=" 1" >
       <vfs_project />
       <vfs_file>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_file>
@@ -14,11 +13,11 @@
       <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
       <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/main_ada_parallel_port.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 3" line=" 82" >
+    <file_marker column=" 3" line=" 85" >
       <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
       <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/main_ada_parallel_port.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 4" line=" 43" >
+    <file_marker column=" 4" line=" 42" >
       <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
       <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/main_ada_parallel_port.adb</vfs_file>
     </file_marker>
@@ -26,7 +25,39 @@
       <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
       <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/main_ada_parallel_port.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 6" line=" 21" >
+    <file_marker column=" 6" line=" 21" >
+      <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/main_ada_parallel_port.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/main_ada_parallel_port.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 119" >
+      <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/main_ada_parallel_port.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 108" >
+      <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/main_ada_parallel_port.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 110" >
+      <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/main_ada_parallel_port.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 110" >
+      <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/main_ada_parallel_port.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/pkg-ada-ppdev/pkg_ada_ppdev.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 110" >
+      <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/main_ada_parallel_port.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 22" line=" 109" >
       <vfs_project>/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr</vfs_project>
       <vfs_file>/home/wruslan/github-ump/ada-parallel-port/src/main_ada_parallel_port.adb</vfs_file>
     </file_marker>

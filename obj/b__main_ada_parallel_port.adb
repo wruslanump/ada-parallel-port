@@ -21,6 +21,7 @@ package body ada_main is
    E081 : Short_Integer; pragma Import (Ada, E081, "system__object_reader_E");
    E050 : Short_Integer; pragma Import (Ada, E050, "system__dwarf_lines_E");
    E039 : Short_Integer; pragma Import (Ada, E039, "system__traceback__symbolic_E");
+   E207 : Short_Integer; pragma Import (Ada, E207, "ada__numerics_E");
    E132 : Short_Integer; pragma Import (Ada, E132, "ada__tags_E");
    E149 : Short_Integer; pragma Import (Ada, E149, "ada__streams_E");
    E166 : Short_Integer; pragma Import (Ada, E166, "system__file_control_block_E");
@@ -37,7 +38,9 @@ package body ada_main is
    E175 : Short_Integer; pragma Import (Ada, E175, "ada__calendar__time_zones_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "ada__real_time_E");
    E161 : Short_Integer; pragma Import (Ada, E161, "ada__text_io_E");
+   E213 : Short_Integer; pragma Import (Ada, E213, "system__random_seed_E");
    E169 : Short_Integer; pragma Import (Ada, E169, "pkg_ada_dtstamp_E");
+   E206 : Short_Integer; pragma Import (Ada, E206, "pkg_ada_random_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -214,6 +217,8 @@ package body ada_main is
       System.Traceback.Symbolic'Elab_Body;
       E039 := E039 + 1;
       E081 := E081 + 1;
+      Ada.Numerics'Elab_Spec;
+      E207 := E207 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Tags'Elab_Body;
       E132 := E132 + 1;
@@ -251,8 +256,12 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E161 := E161 + 1;
+      System.Random_Seed'Elab_Body;
+      E213 := E213 + 1;
       pkg_ada_dtstamp'elab_body;
       E169 := E169 + 1;
+      pkg_ada_random'elab_body;
+      E206 := E206 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -290,6 +299,7 @@ package body ada_main is
 --  BEGIN Object file/option list
    --   /home/wruslan/github-ump/ada-parallel-port/obj/pkg_ada_dtstamp.o
    --   /home/wruslan/github-ump/ada-parallel-port/obj/pkg_ada_ppdev.o
+   --   /home/wruslan/github-ump/ada-parallel-port/obj/pkg_ada_random.o
    --   /home/wruslan/github-ump/ada-parallel-port/obj/main_ada_parallel_port.o
    --   -L/home/wruslan/github-ump/ada-parallel-port/obj/
    --   -L/home/wruslan/github-ump/ada-parallel-port/obj/

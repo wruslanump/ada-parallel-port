@@ -20,7 +20,7 @@ use  Interfaces.C.Extensions;
 with pkg_ada_dtstamp;
 with pkg_ada_ppdev;       -- FOR main_ada_test2.adb
 -- with pkg_aada_ppdev;   -- FOR main_ada_test1.adb
-                          
+with pkg_ada_random;                          
 
 -- ========================================================
 procedure main_ada_parallel_port
@@ -34,12 +34,12 @@ is
    package ASU     renames Ada.Strings.Unbounded;
    package IFaceC  renames Interfaces.C;
    package IFaceCE renames Interfaces.C.Extensions;
-   
-   
+      
    -- RENAME USER-DEFINED ADA PACKAGES FOR CONVENIENCE
    package PADTS   renames pkg_ada_dtstamp;
    package PAPPDEV renames pkg_ada_ppdev;        -- FOR main_ada_test2.adb
    -- package PAAPPDEV renames pkg_aada_ppdev;   -- FOR main_ada_test1.adb
+   package PAR     renames pkg_ada_random;  
    
 -- CONSTANTS DEFINED IN /usr/src/linux-5.4.66/include/uapi/asm-generic/fcntl.h
 -- FOR FILE DESCRIPTOR ATTRIBUTES fd_attrib
@@ -67,13 +67,16 @@ is
    ret_getmode   : IFaceC.int := 999; 
    
    -- VALID PP_DATA DIRECTION VALUES = {0, 1}
-   datadirection : IFaceC.int := 0;   -- for PPDATADIR_OUT 
-   ret_direction : IFaceC.int := 999; 
+   datadirection      : IFaceC.int := 0;   -- for PPDATADIR_OUT 
+   ret_direction      : IFaceC.int := 999; 
    stream_datatowrite : IFaceC.char_array := "Subhanallah Walhamdulillah WallahHuakbar WRY."; 
    ret_writestream    : IFaceC.int := 999; 
    ret_release        : IFaceC.int := 999; 
    ret_close          : IFaceC.int := 999; 
-          
+   
+   random_int         : Integer := 255;
+   ret_inttowrite     : IFaceC.int := 999; 
+   
 begin
 -- ========================================================   
    PADTS.dtstamp; ATIO.Put_Line ("Bismillah 3 times WRY");
@@ -92,15 +95,28 @@ begin
    PADTS.dtstamp; ret_getmode   := PAPPDEV.GetC_ada_ioctl_ppgetmode_current (fd);
    PADTS.dtstamp; ret_direction := PAPPDEV.GetC_ada_ioctl_ppdatadir_dataport (fd, datadirection);
    
-   -- (3) WRITE STREAM DATA TO PARALLEL PORT DATA REGISTER
-   PADTS.dtstamp; 
-   ret_writestream := PAPPDEV.GetC_ada_ioctl_streamdata_writedataregister (fd, stream_datatowrite);
+   -- (3.1) WRITE STREAM DATA TO PARALLEL PORT DATA REGISTER
+   -- ATIO.New_Line;
+   -- PADTS.dtstamp; 
+   -- ret_writestream := PAPPDEV.GetC_ada_ioctl_streamdata_writedataregister (fd, stream_datatowrite);
    
-   -- (4) Parallel port - RELEASE AND CLOSE 
+   -- (3.2) WRITE RANDOM INTEGER DATA TO PARALLEL PORT DATA REGISTER
+   ATIO.New_Line;
+   ATIO.Put_Line("Parport write random integers in a loop");
+   -- loop   -- TO RUN LOOP FOREVER
+   for idx in 1 .. 10 loop
+      random_int := PAR.get_random_integer (0, 255);
+      ret_inttowrite := PAPPDEV.GetC_ada_ioctl_ppwdata_writedataregister(fd, IFaceC.int(random_int)); 
+   end loop;
+   
+   -- (3.3) READ CNC FILE AND WRITE INTEGER DATA TO PARALLEL PORT DATA REGISTER
+   
+   
+   -- (4) Parallel port - RELEASE AND CLOSE  
+   ATIO.New_Line;
    PADTS.dtstamp; ret_release := PAPPDEV.GetC_ada_ioctl_pprelease_parport; 
    PADTS.dtstamp; ret_close := PAPPDEV.GetC_ada_ioctl_close_parport(fd); 
-   
-   
+
    ATIO.New_Line; PADTS.dtstamp; ATIO.Put_Line ("Alhamdulillah 3 times WRY");
    
 -- ========================================================   
