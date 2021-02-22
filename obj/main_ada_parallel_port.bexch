@@ -1,0 +1,27 @@
+[GENERATED OBJECT FILE]
+b__main_ada_parallel_port.o
+[PROJECT FILES]
+/home/wruslan/github-ump/ada-parallel-port/ada_parallel_port.gpr
+20210222140053
+[BOUND OBJECT FILES]
+/home/wruslan/github-ump/ada-parallel-port/obj/pkg_ada_dtstamp.o
+/home/wruslan/github-ump/ada-parallel-port/obj/pkg_ada_ppdev.o
+/home/wruslan/github-ump/ada-parallel-port/obj/main_ada_parallel_port.o
+[GENERATED SOURCE FILES]
+b__main_ada_parallel_port.ads
+b__main_ada_parallel_port.adb
+b__main_ada_parallel_port.ali
+[RESULTING OPTIONS]
+-L/home/wruslan/github-ump/ada-parallel-port/obj/
+-L/home/wruslan/github-ump/ada-parallel-port/obj/
+-L/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
+-shared
+-shared-libgcc
+-lgnarl-9
+-lgnat-9
+-lpthread
+-lrt
+-ldl
+[RUN PATH OPTION]
+/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
+/usr/lib

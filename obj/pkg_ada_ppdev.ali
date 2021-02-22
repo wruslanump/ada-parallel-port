@@ -1,0 +1,111 @@
+V "GNAT Lib v9"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U pkg_ada_ppdev%s	pkg_ada_ppdev.ads	e0884a23 NE OO PK IL
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W interfaces.c.extensions%s  i-cexten.ads	i-cexten.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-c.ads		20200312110721 5421119b interfaces.c%s
+D i-cexten.ads		20200312110721 38d7e116 interfaces.c.extensions%s
+D pkg_ada_ppdev.ads	20201218154742 8c7ebaae pkg_ada_ppdev%s
+D system.ads		20200312110721 4635ec04 system%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+X 3 interfac.ads
+38K9*Interfaces 184e15 6|1r6 2r6 8r27 9r28
+X 4 i-c.ads
+18K20*C 230e17 6|1w17 2r17 8r38 9r39
+35I9*int<integer> 6|41r95 41r114 46r58 46r77 51r61 51r80 56r71 56r90 61r60
+. 61r79 66r73 66r92 71r61 71r80 76r73 76r92 81r61 81r80 86r76 86r95 91r81
+. 91r100 97r71 97r133 102r67 102r86 107r72 107r91 112r91 112r110 117r74 117r93
+. 122r59 127r59 132r82 132r101 137r79 137r98 142r69 142r88 147r59 147r78
+. 152r66 152r85 157r59 162r56 162r75 168r56 168r75 172r75 172r94
+72E9*char<character>
+79A9*char_array(72E9)<60M9> 6|41r61 97r107
+X 5 i-cexten.ads
+37K22*Extensions 476e28 6|2w19 9r41
+X 6 pkg_ada_ppdev.ads
+7K9*pkg_ada_ppdev 204l5 204e18
+8K12*IFaceC=8:38 41r54 41r88 41r107 46r51 46r70 51r54 51r73 56r64 56r83 61r53
+. 61r72 66r66 66r85 71r54 71r73 76r66 76r85 81r54 81r73 86r69 86r88 91r74
+. 91r93 97r64 97r100 97r126 102r60 102r79 107r65 107r84 112r84 112r103 117r67
+. 117r86 122r52 127r52 132r75 132r94 137r72 137r91 142r62 142r81 147r52 147r71
+. 152r59 152r78 157r52 162r49 162r68 168r49 168r68 172r68 172r87
+9K12*IFaceCE=9:41
+25U12*ExeC_ada_current_working_directory
+30U12*ExeC_ada_display_date_only
+41V12*GetC_ada_ioctl_open_parport{4|35I9} 41>40 41>73
+41a40 the_port{4|79A9}
+41i73 fd_attrib{4|35I9}
+46V12*GetC_ada_ioctl_ppclaim_parport{4|35I9} 46>43
+46i43 fd{4|35I9}
+51V12*GetC_ada_ioctl_ppgetmodes_parport{4|35I9} 51>46
+51i46 fd{4|35I9}
+56V12*GetC_ada_ioctl_ppsetmode_parport{4|35I9} 56>45 56>49
+56i45 fd{4|35I9}
+56i49 modetoset{4|35I9}
+61V12*GetC_ada_ioctl_ppgetmode_current{4|35I9} 61>45
+61i45 fd{4|35I9}
+66V12*GetC_ada_ioctl_ppsetflags_parport{4|35I9} 66>46 66>50
+66i46 fd{4|35I9}
+66i50 flagstoset{4|35I9}
+71V12*GetC_ada_ioctl_ppgetflags_current{4|35I9} 71>46
+71i46 fd{4|35I9}
+76V12*GetC_ada_ioctl_ppsetphase_parport{4|35I9} 76>46 76>50
+76i46 fd{4|35I9}
+76i50 phasetoset{4|35I9}
+81V12*GetC_ada_ioctl_ppgetphase_current{4|35I9} 81>46
+81i46 fd{4|35I9}
+86V12*GetC_ada_ioctl_ppdatadir_dataport{4|35I9} 86>46 86>50
+86i46 fd{4|35I9}
+86i50 datadirection{4|35I9}
+91V12*GetC_ada_ioctl_ppwdata_writedataregister{4|35I9} 91>53 91>57
+91i53 fd{4|35I9}
+91i57 datatowrite{4|35I9}
+97V13*GetC_ada_ioctl_streamdata_writedataregister{4|35I9} 97>57 97>76
+97i57 fd{4|35I9}
+97a76 stream_datatowrite{4|79A9}
+102V12*GetC_ada_ioctl_pprdata_readdataregister{4|35I9} 102>52
+102i52 fd{4|35I9}
+107V13*GetC_ada_ioctl_pprstatus_readstatusregister{4|35I9} 107>57
+107i57 fd{4|35I9}
+112V13*GetC_ada_ioctl_ppwcontrol_writecontrolregister{4|35I9} 112>60 112>64
+112i60 fd{4|35I9}
+112i64 controltowrite{4|35I9}
+117V13*GetC_ada_ioctl_pprcontrol_readcontrolregister{4|35I9} 117>59
+117i59 fd{4|35I9}
+122V13*GetC_ada_ioctl_ppfcontrol_frob1{4|35I9}
+127V13*GetC_ada_ioctl_ppfcontrol_frob2{4|35I9}
+132V13*GetC_ada_ioctl_ppwctlonirq_controlport{4|35I9} 132>52 132>56
+132i52 fd{4|35I9}
+132i56 the_interrupt{4|35I9}
+137V13*GetC_ada_ioctl_ppclrirq_controlport{4|35I9} 137>49 137>53
+137i49 fd{4|35I9}
+137i53 the_interrupt{4|35I9}
+142V13*GetC_ada_ioctl_ppnegot_mode{4|35I9} 142>41 142>45
+142i41 fd{4|35I9}
+142i45 modetonegot{4|35I9}
+147V13*GetC_ada_ioctl_ppyield_parport{4|35I9} 147>44
+147i44 fd{4|35I9}
+152V13*GetC_ada_ioctl_ppgettime_usec_parport{4|35I9} 152>51
+152i51 fd{4|35I9}
+157V12*GetC_ada_ioctl_pprelease_parport{4|35I9}
+162V12*GetC_ada_ioctl_close_parport{4|35I9} 162>41
+162i41 fd{4|35I9}
+168V10*GetC_ada_ioctl_ppexcl_parport{4|35I9} 168>41
+168i41 fd{4|35I9}
+172V10*GetC_ada_ioctl_ppsettime_timeoutparport{4|35I9} 172>51 172>55
+172i51 fd{4|35I9}
+172i55 timeout{4|35I9}
+
